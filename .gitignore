@@ -1,3 +1,2 @@
 /.vscode
-divebook/divebook/__pycache__
-divebook/divebook/__pycache__/*
+*.pyc
