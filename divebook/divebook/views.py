@@ -1,8 +1,8 @@
 """Project-level views for the divebook site."""
 
-from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def homepage(request):
-    """Return a plain text response for the home page."""
-    return HttpResponse("Hello World!")
+    """Render the home page template."""
+    return render(request, "home.html")
