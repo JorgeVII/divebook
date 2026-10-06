@@ -1,11 +1,22 @@
-<!doctype html>
-<html lang="en">
+<!doctype html> {% load static %}
+<!-- le dice a Django que vas a usar archivos estáticos. Va una vez al principio del HTML -->
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <title>DiveBook - Home</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <!-- Esta línea le dice a django que busque dentro de los static
+un archivo llamado style.css y que me devuelva el path. Se convierte en la dirección real del archivo-->
   </head>
   <body>
-    <h1>Bienvenidos a Scuba Doo</h1>
-    <p>Busca salidas de buceo en centros recreativos.</p>
+    <h1>Bievenidos a Scuba Doo</h1>
+    <p>Encuentra salidas de buceo en centros recreativos.</p>
+
+    <img src="{% static 'images/diving.png' %}" alt="Scuba logo" />
+
+    <p><button id="welcome-button">Pulsa el boton</button></p>
+    <p id="welcome-message"></p>
+
+    <script src="{% static 'js/main.js' %}"></script>
   </body>
 </html>
