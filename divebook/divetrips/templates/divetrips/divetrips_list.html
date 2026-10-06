@@ -6,6 +6,13 @@
     <title>DiveBook - Dive trips</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
+
+  <nav>
+    <a href="{% url 'home' %}">HOME</a>
+    <a href="{% url 'divetrips_list' %}">Salidas Buceo</a>
+    <!-- Si algún día la dirección se cambia, los enlaces se actualizan solos -->
+  </nav>
+
   <body>
     <h1>Salidas de buceo disponibles</h1>
 

@@ -28,3 +28,19 @@ button {
     border-radius: 6px;
     cursor: pointer;
 }
+
+/* Barra nav */
+nav {
+    background-color: #145374;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 12px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
