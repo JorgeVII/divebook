@@ -1,0 +1,29 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DiveBook - Dive trips</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+
+  <nav>
+    <a href="{% url 'home' %}">HOME</a>
+    <a href="{% url 'divetrips_list' %}">Salidas Buceo</a>
+    <!-- Si algún día la dirección se cambia, los enlaces se actualizan solos -->
+  </nav>
+
+  <body>
+    <h1>Salidas de buceo disponibles</h1>
+
+    <p>Dos excursiones de muestra</p>
+
+    <h2>Buceo en arrecife para principiantes</h2>
+    <p>Excursión de medio día con todo el equipo incluido.</p>
+
+    <h2>Buceo en pecios para buceadores avanzados</h2>
+    <p>
+      Excursión de día completo, se requiere certificación Advanced Open Water.
+    </p>
+  </body>
+</html>
