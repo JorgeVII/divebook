@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Scuba Doo - Contacto{% endblock %}
+
+{% block content %}
+    <h1>Contacto</h1>
+    <p>¿Tienes alguna duda? Escríbenos.</p>
+
+    <form method="post" action="{% url 'contact' %}">
+        {% csrf_token %}
+
+        <p>
+            <label for="name">Nombre</label><br>
+            <input type="text" id="name" name="name" required>
+        </p>
+        <p>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required>
+        </p>
+        <p>
+            <label for="message">Mensaje</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </p>
+        <p><button type="submit">Enviar</button></p>
+    </form>
+{% endblock %}

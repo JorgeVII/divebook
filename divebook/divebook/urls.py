@@ -25,5 +25,6 @@ urlpatterns = [
     path("", views.homepage, name="home"),
     # Esta línea añade automáticamente todas las urls que he vinculado en el
     # punto anterior (de momento solo 1)
+    path("contact/", views.contact, name="contact"),
     path("divetrips/", include("divetrips.urls")),
 ]

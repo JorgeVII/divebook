@@ -1,0 +1,27 @@
+<!doctype html>
+{% load static %}
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}DiveBook{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="icon" href="data:," />
+  </head>
+
+  <body>
+    <nav>
+      <a href="{% url 'home' %}">HOME</a>
+      <a href="{% url 'divetrips_list' %}">Salidas Buceo</a>
+      <a href="{% url 'contact' %}">Contacto</a>
+    </nav>
+
+    <main>{% block content %} {% endblock %}</main>
+
+    <footer>
+      <p>&copy; 2026 Scuba Doo - Recreational dive trips</p>
+    </footer>
+
+    {% block scripts %} {% endblock %}
+  </body>
+</html>
