@@ -44,3 +44,19 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
+
+/* Contact form */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #0b3c5d;
+    border-radius: 4px;
+}
