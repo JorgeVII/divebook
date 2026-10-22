@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Scuba Doo - Fecha no válida{%endblock %}
+
+{% block content %}
+<h1>Fecha no válida</h1>
+<p>
+  Fecha no reconocida: "{{ fecha }}". Escribe la fecha con el formato DD-MM-AAAA, por ejemplo 15-10-2026.
+</p>
+<p><a href="{% url 'homepage' %}">Volver al inicio</a></p>
+{% endblock %}
