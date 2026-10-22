@@ -27,4 +27,5 @@ urlpatterns = [
     # punto anterior (de momento solo 1)
     path("contact/", views.contact, name="contact"),
     path("divetrips/", include("divetrips.urls")),
+    path("calendario/", include("calendario.urls")),
 ]
