@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Scuba Doo - Tres en raya{% endblock %}
+
+{% block content %}
+    <h1>Tres en raya</h1>
+    <p>{{ mensaje }}</p>
+
+    <div>
+        {% if not terminado %}
+            <form action="{% url 'tres_en_raya:play' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="tablero" value="{{ tablero }}">
+                <input type="hidden" name="turno" value="{{ turno }}">
+                {% for casilla in tablero %}
+                    <button type="submit" name="posicion" value="{{ forloop.counter0 }}">
+                        {{ casilla }}
+                    </button>
+                {% endfor %}
+            </form>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -11,6 +11,9 @@ h1 {
     color: white;
     margin: 0;
     padding: 24px;
+    box-shadow:
+        0 -12px 35px rgba(11, 60, 93, 0.6),
+        0 12px 35px rgba(11, 60, 93, 0.25);
 }
 
 img {
@@ -59,4 +62,12 @@ textarea {
     box-sizing: border-box;
     border: 1px solid #0b3c5d;
     border-radius: 4px;
+}
+
+footer {
+    background-color: #0b3c5d;
+    color: white;
+    padding: 12px;
+    margin-top: 40px;
+    box-shadow: 0 -12px 35px rgba(11, 60, 93, 0.5);
 }

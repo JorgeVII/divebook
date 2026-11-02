@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "divetrips",
     "calendario",
+    "tres_en_raya",
 ]
 
 MIDDLEWARE = [
