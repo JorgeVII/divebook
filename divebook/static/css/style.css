@@ -71,3 +71,57 @@ footer {
     margin-top: 40px;
     box-shadow: 0 -12px 35px rgba(11, 60, 93, 0.5);
 }
+
+/* BOARD */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 8px;
+    justify-content: center;
+    max-width: none;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    background-color: white;
+    border: 2px solid #0b3c5d;
+    border-radius: 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cell:not(:disabled):hover {
+    background-color: #d4ecf5;
+}
+
+.cell:disabled {
+    cursor: default;
+}
+
+/* X is red and O is green */
+.cell-x {
+    color: #d62828;
+}
+
+.cell-o {
+    color: #1e8e3e;
+}
+
+.game-message {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.new-game {
+    display: inline-block;
+    background-color: #0b3c5d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+}

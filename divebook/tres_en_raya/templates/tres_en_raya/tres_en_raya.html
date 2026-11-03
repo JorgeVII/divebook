@@ -4,20 +4,22 @@
 
 {% block content %}
     <h1>Tres en raya</h1>
-    <p>{{ mensaje }}</p>
+    <p class="game-message">{{ mensaje }}</p>
 
-    <div>
-        {% if not terminado %}
-            <form action="{% url 'tres_en_raya:play' %}" method="post">
-                {% csrf_token %}
-                <input type="hidden" name="tablero" value="{{ tablero }}">
-                <input type="hidden" name="turno" value="{{ turno }}">
-                {% for casilla in tablero %}
-                    <button type="submit" name="posicion" value="{{ forloop.counter0 }}">
-                        {{ casilla }}
-                    </button>
-                {% endfor %}
-            </form>
-        {% endif %}
-    </div>
+    <form class="board" action="{% url 'tres_en_raya:play' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="tablero" value="{{ tablero }}">
+        <input type="hidden" name="turno" value="{{ turno }}">
+        {% for casilla in tablero %}
+            <button type="submit" name="posicion" value="{{ forloop.counter0 }}"
+                    class="cell{% if casilla == 'X' %} cell-x{% elif casilla == 'O' %} cell-o{% endif %}"
+                    {% if terminado or casilla != '-' %}disabled{% endif %}>
+                {% if casilla != '-' %}{{ casilla }}{% endif %}
+            </button>
+        {% endfor %}
+    </form>
+
+    {% if terminado %}
+        <p><a class="new-game" href="{% url 'tres_en_raya:play' %}">Nueva partida</a></p>
+    {% endif %}
 {% endblock %}
