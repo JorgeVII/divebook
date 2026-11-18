@@ -28,5 +28,7 @@ urlpatterns = [
     path("contact/", views.contact, name="contact"),
     path("divetrips/", include("divetrips.urls")),
     path("calendario/", include("calendario.urls")),
-    path("tres-en-raya/", include("tres_en_raya.urls")),
+    path(
+        "tres-en-raya/", include("tres_en_raya.urls")
+    ),  # Connect pre with APP. Swap the roots
 ]
