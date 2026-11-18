@@ -35,6 +35,7 @@ def calendario(request, fecha):
 
     If the text is not a valid date, render an error page instead.
     """
+    request.session["visitas"] = request.session.get("visitas", 0) + 1
     try:
         fecha_objeto = datetime.strptime(fecha, "%d-%m-%Y").date()
     except ValueError:

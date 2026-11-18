@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "divetrips",
     "calendario",
-    "tres_en_raya",
+    "tres_en_raya",  # Regist APP. Found APP and templates
 ]
 
 MIDDLEWARE = [
@@ -131,3 +131,8 @@ MAILERS = {
         "BACKEND": "django.core.mail.backends.console.EmailBackend",
     },
 }
+
+# Session settings
+SESSION_COOKIE_AGE = 7200  # Lifetime in seconds (2 hours)
+SESSION_SAVE_EVERY_REQUEST = True  # Save the session on every request
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # Keep the session after closing the browser

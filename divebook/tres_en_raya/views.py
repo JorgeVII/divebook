@@ -18,7 +18,7 @@ WINNING_LINES = [
 
 
 def calcular_ganador(tablero):
-    """Return 'X' or 'O' if a player has three in a row, otherwise None."""
+
     for a, b, c in WINNING_LINES:
         if tablero[a] != "-" and tablero[a] == tablero[b] == tablero[c]:
             return tablero[a]
@@ -26,7 +26,7 @@ def calcular_ganador(tablero):
 
 
 def jugada_valida(tablero, turno, posicion):
-    """Check that the data received from the form is a legal move."""
+
     if len(tablero) != 9 or any(c not in "XO-" for c in tablero):
         return False
     if turno not in ("X", "O"):
@@ -37,7 +37,10 @@ def jugada_valida(tablero, turno, posicion):
 
 
 def tres_en_raya(request):
-    """Show the board and, when the form is sent, apply the chosen move."""
+
+    request.session["visitas"] = (
+        request.session.get("visitas", 0) + 1
+    )  # New line for UT5 user visit
 
     tablero = EMPTY_BOARD
     turno = "X"
