@@ -8,8 +8,8 @@
 
     <form class="board" action="{% url 'tres_en_raya:play' %}" method="post">
         {% csrf_token %}
-        <input type="hidden" name="tablero" value="{{ tablero }}">
-        <input type="hidden" name="turno" value="{{ turno }}">
+        {% comment %} <input type="hidden" name="tablero" value="{{ tablero }}">
+        <input type="hidden" name="turno" value="{{ turno }}"> {% endcomment %}
         {% for casilla in tablero %}
             <button type="submit" name="posicion" value="{{ forloop.counter0 }}"
                     class="cell{% if casilla == 'X' %} cell-x{% elif casilla == 'O' %} cell-o{% endif %}"
