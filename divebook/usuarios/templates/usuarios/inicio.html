@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Scuba Doo - Usuarios{% endblock %}
+
+{% block content %}
+    <h1>Usuarios</h1>
+
+    {% if user.is_authenticated %}
+        <p>Has iniciado sesión como <strong>{{ user.username }}</strong>.</p>
+    {% else %}
+        <p>Inicia sesión si ya tienes cuenta o regístrate si eres nuevo.</p>
+        <p>
+            <a href="{% url 'usuarios:iniciar_sesion' %}">Iniciar sesión</a>
+            <a href="{% url 'usuarios:registro' %}">Registrarse</a>
+        </p>
+    {% endif %}
+{% endblock %}

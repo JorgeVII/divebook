@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "divetrips",
     "calendario",
-    "tres_en_raya",  # Regist APP. Found APP and templates
+    "tres_en_raya",
+    "usuarios",
 ]
 
 MIDDLEWARE = [
@@ -105,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/6.1/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "es-es"
 
 TIME_ZONE = "UTC"
 
@@ -136,3 +137,5 @@ MAILERS = {
 SESSION_COOKIE_AGE = 7200  # Lifetime in seconds (2 hours)
 SESSION_SAVE_EVERY_REQUEST = True  # Save the session on every request
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # Keep the session after closing the browser
+
+LOGIN_URL = "usuarios:iniciar_sesion"  # UT5 T3 (users): where Django sends users who are not logged in
